@@ -1,0 +1,38 @@
+extends layout
+
+block content
+    h1 Cadastro de Estabelecimentos
+    hr
+    a(href="/estabelecimentos") Voltar
+    br
+    br
+    form(method="POST", action="/estabelecimentos/add")
+        div(class="form-group")
+            label Nome
+            input(type="text", class="form-control", name="nome" placeholder="Nome", autofocus, required)
+        div(class="form-group")
+            label Endereço
+            input(type="text", class="form-control", name="endereco" placeholder="Rua...", required)
+        div(class="form-group")
+            label Número
+            input(type="text", class="form-control", name="numero" placeholder="Número")
+        div(class="form-group")
+            label Cep
+            input(type="text", class="form-control", name="cep", placeholder="89250000", required)
+        div(class="form-group")
+            label Bairro
+            input(type="text", class="form-control", name="bairro", placeholder="Bairro", required)
+        div(class="form-group")
+            label Cidade
+            input(type="text", class="form-control", name="cidade", placeholder="Cidade", required)
+        div(class="form-group")
+            label Estado
+            input(type="text", class="form-control", name="estado", placeholder="Estado", required)
+        div(class="form-group")
+            label Telefone
+            input(type="text", class="form-control", name="telefone", placeholder="(47) 3333-4444)", required)
+        button(type="submit", name="submit", class="btn btn-success") Salvar
+    br
+    br
+    a(href="/estabelecimentos") Voltar
+

@@ -1,0 +1,47 @@
+extends layout
+
+block content
+    h1 Estabelecimentos
+    br
+    button(onclick='addEstabelecimento();', class="btn btn-success") Cadastrar
+    &nbsp;
+    button(onclick='addImage();', class="btn btn-success") Adicionar Imagem
+    br
+    br
+    if data.length > 0 
+        table(class="table table-striped")
+            thead
+                tr
+                    th Cardápio
+                    th Nome
+                    th Endereço
+                    th Número
+                    th Cep
+                    th Bairro
+                    th Cidade
+                    th Estado
+                    th Telefone
+                    th Ações
+            tbody
+                each valor in data
+                    tr
+                        td 
+                            button(onClick='', class="btn btn-default") Abrir
+                        td #{valor.nome}
+                        td #{valor.endereco}
+                        td #{valor.numero}
+                        td #{valor.cep}
+                        td #{valor.bairro}
+                        td #{valor.cidade}
+                        td #{valor.estado}
+                        td #{valor.telefone}
+                        td
+                            a(href="../estabelecimentos/edit/#{valor.id}", class="btn btn-info")
+                                span(class="glyphicon glyphicon-edit")
+                                
+                            a(href="../estabelecimentos/delete/#{valor.id}", class="btn btn-primary")
+                                span(class="glyphicon glyphicon-remove")
+    else
+        p Nenhum estabelecimento cadastrado!
+                    
+            

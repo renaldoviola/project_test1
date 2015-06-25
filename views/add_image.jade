@@ -1,0 +1,14 @@
+extends layout
+
+block content
+    h1 Cadastro de Imagens
+    hr
+    a(href="/estabelecimentos") Voltar
+    br
+    br
+    form(method="POST", action="/estabelecimentos/addImage", enctype='multipart/form-data')
+            input(name='image', type='file')
+            button(type="submit", name="submit", class="btn btn-primary") Salvar
+    br
+    br
+    a(href="/estabelecimentos") Voltar

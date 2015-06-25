@@ -1,0 +1,56 @@
+<%- include layouts/header.ejs %>
+
+        <div class="page-data">
+            
+            <form method="post" action="/estabelecimentos/add">
+                <table cellpadding="11">
+                <tr>
+                    <td class="label">Nome</td>
+                    <td> <input type="text" name="nome" required></td>
+                 </tr>
+                 <tr>
+                    <td class="label" valign="top">Endereço</td>
+                    <td valign="top"> <textarea name="endereco" required cols="30" rows="5"></textarea></td>
+                </tr>
+                <tr>
+                    <td class="label">Número</td>
+                    <td> <input type="text" name="numero" required></td>
+                 </tr>
+                  <tr>
+                    <td class="label">Cep</td>
+                    <td> <input type="text" name="cep" required></td>
+                 </tr>
+
+                 <tr>
+                    <td class="label">Bairro</td>
+                    <td> <input type="text" name="bairro" required></td>
+                 </tr>
+
+                 <tr>
+                    <td class="label">Cidade</td>
+                    <td> <input type="text" name="cidade" required></td>
+                 </tr>
+
+                <tr>
+                    <td class="label">Estado</td>
+                    <td> <input type="text" name="estado" required></td>
+                 </tr>
+
+                <tr>
+                    <td class="label">Telefone</td>
+                    <td> <input type="text" name="telefone" required></td>
+                 </tr>
+
+                 <tr>
+                    <td class="label"></td>
+                    <td>
+                        &nbsp; <input type="submit" name="submit" value="Save">
+                       <input type="button" name="cancel" value="Cancel" class="cancel" onClick="cancelAdd()">
+                    </td>
+                 </tr>
+                </table>
+            </form>
+            
+        </div>
+        
+<%- include layouts/footer.ejs %>

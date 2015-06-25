@@ -1,0 +1,58 @@
+<%- include layouts/header.ejs %>
+
+        <div class="page-data">
+            
+            <form method="post" action="/estabelecimento/edit/<%=data[0].id%>">
+                <table cellpadding="11">
+                <tr>
+                    <td class="label">Nome</td>
+                    <td> <input type="text" name="nome" value="<%=data[0].nome%>" required></td>
+                 </tr>
+                 <tr>
+                    <td class="label" valign="top">Endereço</td>
+                    <td valign="top">
+                        <textarea name="endereco" required cols="30" rows="5"><%=data[0].endereco%></textarea>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="label">Número</td>
+                    <td> <input type="text" value="<%=data[0].numero%>" name="numero" required></td>
+                 </tr>
+                  <tr>
+                    <td class="label">Cep</td>
+                    <td> <input type="text" name="cep" value="<%=data[0].cep%>" required></td>
+                 </tr>
+
+                <tr>
+                    <td class="label">Bairro</td>
+                    <td> <input type="text" name="bairro" value="<%=data[0].bairro%>" required></td>
+                 </tr>
+
+                 <tr>
+                    <td class="label">Cidade</td>
+                    <td> <input type="text" name="cidade" value="<%=data[0].cidade%>" required></td>
+                 </tr>
+
+                 <tr>
+                    <td class="label">Estado</td>
+                    <td> <input type="text" name="estado" value="<%=data[0].estado%>" required></td>
+                 </tr>
+
+                 <tr>
+                    <td class="label">Telefone</td>
+                    <td> <input type="text" name="telefone" value="<%=data[0].telefone%>" required></td>
+                 </tr>
+
+                 <tr>
+                    <td class="label"></td>
+                    <td>
+                        &nbsp; <input type="submit" name="submit" value="Save">
+                       <input type="button" name="cancel" value="Cancel" class="cancel" onClick="cancelAdd()">
+                    </td>
+                 </tr>
+                </table>
+            </form>
+            
+        </div>
+        
+<%- include layouts/footer.ejs %>

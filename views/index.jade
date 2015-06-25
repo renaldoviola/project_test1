@@ -1,0 +1,29 @@
+extends layout
+
+block content
+	div.container
+			div.title
+				a(href="/")
+					h1 Localize um Estabelecimento
+				h3.text-muted Faça a busca para localizar o estabelecimento de sua preferência !
+			div.row.buttons
+				div.col-sm-3
+					label &nbsp;
+					button.btn.btn-warning.form-control(id="btn_location" type="button")
+						i(class="glyphicon glyphicon-screenshot") &nbsp;
+						span Minha Localização
+				div.col-sm-9
+					label.text-muted(for="address") Onde você está ?
+					div.input-group
+						input(type="text" name="address" id="address" placeholder="Cidade, bairro" class="form-control")
+						span.input-group-btn
+							button(id="btn_search" class="btn btn-primary" type="button") Go
+			div.row
+				div.col-sm-12
+					h5.text-muted 
+			div.row
+				div.col-sm-12
+					div#finding_location.alert.alert-warning Encontrar Localização
+			div.row#geolocation_error
+				div.col-sm-12
+					div.alert.alert-danger Sinto muito, não conseguimos encontrar o seu local :(
